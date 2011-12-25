@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Facebook Lists</title>
+  <meta name="author" content="Bay Gross">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script>!window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');</script>
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+  <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-twipsy.js" type="text/javascript"></script>
+  <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-popover.js" type="text/javascript"></script>
+  <script src="/javascripts/underscore.js" type="text/javascript"></script>
+  <script src="/javascripts/main.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css" media="screen" />
+
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="/">Facebook Lists</a>
+        <ul class="nav">
+          <li class="<%= request.path_info == '/' ? '' : 'active' %>"><a href="/about">About</a></li>
+        </ul>
+        <p class="pull-right"><a id="logout" style="display:none" href="javascript:LogOut()">Logout</a></p>
+      </div>
+    </div>
+  </div>
+
+<div id="spacer">&nbsp;</div>
+
+<%= yield %>
+
+  
+<!-- facebook code -->
+<%= erb :facebook %>
+
+
+</body>
+</html>
