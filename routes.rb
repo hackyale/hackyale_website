@@ -3,12 +3,11 @@ get '/' do
   erb :index
 end
 
-get '/privacy' do
-  erb :privacy
-end
-
-get '/about' do
-  erb :privacy
+#panel pages, handle anchor redirects
+pages = %w[about courses team]
+route_rgx = %r{^/(#{pages.join '|'})$}i # case-insensitive
+get route_rgx do
+  redirect "/#" + params[:captures].first.downcase
 end
 
 #map all stylesheets to sass

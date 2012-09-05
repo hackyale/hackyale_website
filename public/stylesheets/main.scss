@@ -1,115 +1,504 @@
-@import 'common-vars';
+@import "fixes";
+@import "common-vars";
 
+/* ==|== primary styles =====================================================
+   Author: Brennan Moore @zamiang
+   ========================================================================== */
 
-//bootstrap hacks
-.container-fluid > .content{
-  margin-left:360px;
-}
-.container-fluid > .sidebar{
-  width:340px;
-}
-.topbar{
-  position:absolute;
-}
-.container.min{
-  width:440px;
-}
-
-//main layout
-#spacer{
-  height:60px;
-}
-.col{
-  min-height:400px;
-  padding-top:20px;
-  padding-bottom:60px;
-}
-
-#fb_lists{
-  .fblist{
-    h3{
-      clear:left;
-      font-size:14px;
-      padding-top:10px;
-      line-height:1em;
-    }
-    label{
-      padding-top:4px;
-      width:80px;
-      text-align:left;
-    }
+html {
+  height:100%;
+  overflow-x:hidden;
+  overflow-y:auto;
+  body {
+    color:#333;
+    direction:ltr;
+    font-size:13px;
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    font-weight:normal;
+    line-height:142%;
+    padding:0px;
+    margin:0px;
+    height:auto;
+    min-height:100%;
   }
 }
 
+#bg_gradient{
+  z-index:-8;
+  /* Background Gradient */
+  background: rgb(253,253,253); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(253,253,253,1) 0%, rgba(243,243,243,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(253,253,253,1)), color-stop(100%,rgba(243,243,243,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(253,253,253,1) 0%,rgba(243,243,243,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(253,253,253,1) 0%,rgba(243,243,243,1) 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, rgba(253,253,253,1) 0%,rgba(243,243,243,1) 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f3f3f3',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(top, rgba(253,253,253,1) 0%,rgba(243,243,243,1) 100%); /* W3C */
+}
 
-#start{
-  #fb_connect{
-    margin-top: 10px;
-    .facebook-button {
-      height: 46px;
-      width:120px;
-      display: block;
-      background: transparent url("/images/facebook-lg-f.png") no-repeat top left;
-      padding-left: 48px;
-      cursor: pointer;
+a, a:visited {
+  text-decoration: none;
+  color:$darkBlue;
+  border:none;
+  cursor: pointer;
+}
+a:active, a:hover {
+  color:$pink;
+  text-decoration: underline;
+  color:$pink;
+}
 
-      .button-text {
-        display: block;
-        padding: 15px 7px 17px 5px;
-        background: transparent url("/images/facebook-lg-r.png") no-repeat top right;
-        color: $grey;
-      }
 
-      &.active {
-        margin-top: 1px; // Class needs to be applied via JS since this is a div	
-      }
+header  {
+  padding: 6px;
+  padding-top: 15px;
+  font-family: "Helvetica Neue",Helvetica,Arial,default;
+  font-size: 12px;
+  z-index:10;
+  background: $darkBlue;
+  border-bottom: 1px solid #AAAAAA;
+  font-size: 12px;
+  left: 0;
+  opacity: 0.95;
+  padding: 10px 0 6px;
+  position: fixed;
+  width: 100%;
+  color:#f3f3f3;
+  >div{
+    width: 888px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5px;
+    z-index: 1;
+    position:relative;
+  }
+  a, a:visited {
+    margin-right:20px;
+    margin-left:20px;
+    font-weight:bold;
+    color:#f3f3f3;
+  }
+}
+
+//----------  SlideShow
+.headerimg {
+  display:block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+
+//main layout
+#wrapper{
+  width: 860px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:5px;
+  z-index: 1;
+  position:relative; 
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  .banner {
+    margin-top: 0px;
+    background: $medBlue;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: -53px;
+    padding-left: 52px;
+    width: 62%;
+    &.full_width{
+      width:100%;
+      padding-right:0px;
     }
-    #privacy_info {
-      margin-top: 4px;
-      color: $sec_text;
-      font-size: 11px;
-      a{
-        color: $sec_text;
-        &:hover{
-          text-decoration:underline;
+    position: relative;
+    border-bottom: 1px solid #254360;
+    .arrow {
+      position: absolute;
+      bottom: -14px;
+      left: 0px;
+      width: 14px;
+    }
+  }
+  .right_section {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 108px;
+    width: 21.6%;
+    z-index:10;
+    width: 210px;
+    margin-right: 38px;
+  }
+  .main_content {
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5px;
+    z-index: 1;
+    position:relative;
+    &.full{
+      width: 900px;
+      min-height:500px;
+    }
+  }
+  .main_content, .right_section {
+    border: 1px solid #C3C3C3;
+    border-top: 1px solid #aaa;
+    background: #FAFAFA;
+    background-color: rgba(99%, 99%, 99%, 0.95);
+    margin-top: 39px;
+    margin-bottom:50px;
+    padding: 28px 38px 38px;
+    display:inline-block;
+  }
+  .courses {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    li {
+      list-style: none;
+      border: 1px solid #C3C3C3;
+      border-top: 1px solid #aaa;
+      background: #FAFAFA;
+      background-color: rgba(99%, 99%, 99%, 0.95);
+      margin-top: 39px;
+      margin-bottom: 26px;
+      padding: 30px 41px 41px;
+      &.first {
+        margin-top: 0px;
+      }
+      &.last {
+        margin-bottom: 0px;
+      }
+      .left {
+        display:inline-block;
+        width: 544px;
+        .name {
+          font-size: 28px;
+          font-weight: bold;
+          line-height: 145%;
+          border-bottom: 1px solid #BBB;
+          margin-bottom: 15px;
+          padding-bottom: 12px;
+        }
+        .description {
+          line-height: 152%;
+          font-size: 16px;
+          width: 80%;
+        }
+        .wide_description {
+          line-height: 152%;
+          font-size: 14px;
+        }
+      }
+      .right {
+        float: right;
+        text-align: center;
+        width: 150px;
+        vertical-align:top;
+        margin-top:21px;
+        .difficulty {
+          font-style: italic;
+          color: #666;
         }
       }
     }
-  }
+  }    
+}
+.apply_button {
+  background: $darkBlue;
+  border: 1px solid $darkBlue;
+  color: white !important;
+  font-size: 24px;
+  padding: 16px 46px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  border-radius:2px;
+  margin-left: -4px;
+  display: block;
+}
+.apply_button:hover {
+  background:#fff;
+  background:#E1E8EA;
+  color:#000 !important;
+  border:1px solid #ccc;
+  text-decoration: none;
 }
 
+.main_content{
+  #facebook_float{
+    position: absolute;
+    right: 6px;
+    top: -136px;
+    >iframe{
+      float:right;
+      clear:right;
+      margin-top:8px;
+      margin-right:20px;
+    }
+    #fb_frame{
+      margin-right:0px;
+      margin-top:0px;
+    }    
+  }
+  .super {
+    font-weight:bold;
+    line-height:212%;
+    color:#bbb;
+    margin-bottom:5px
+  }
 
-#success{
-  #filter_status{
-    font-size: 15px;
-    strong{
-      color:$blue;
+  .logo {
+    margin-bottom:6px;
+    margin-right: 0;
+    margin-top: 40px;
+  }
+
+  &.course {
+    h1 {
+      font-size: 48px;
+      font-weight: bold;        
+      line-height:150%;
+    }
+    .subheading {
+      font-size:20px;
+      font-weight: normal;
+      color:#444;
+    }
+    .content .body.small {
+      width: 56%;
     }
   }
-  #filter_hint{
-    color:#888;
-    font-size:12px;
+  .subheading {
+    font-size: 36px;
+    line-height: 144%;
+    margin-top: 4px;
   }
-  #fb_friends{
-    img{
-      @include rounded_corners(2px);
-      margin:5px;
+  .content {
+    border-top:1px solid #ccc;
+    margin-top:15px;
+    position:relative;
+    .section {
+      padding-bottom:20px;
+      padding-top:20px;
+      border-bottom:1px solid #dedede;
+      &.last {
+        border-bottom:0px solid #dedede;
+        padding-bottom:0px;
+      }
+      .title {
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 152%;
+        padding-bottom: 16px;
+      }
+    }
+    .body.small {
+      width: 79%;
+      p:nth-child(1){
+        margin-top:0px;
+      }
+    }
+    ul.section {
+      border-bottom: 1px solid #DEDEDE;
+      font-size: 16px;
+      line-height: 165%;
+      margin: 0;
+      padding-bottom: 16px;
+      padding-left: 17px;
+      padding-top: 20px;            
+      li {
+        padding-bottom:5px;
+        &.last {
+          border-bottom: 0px;
+        }
+      }
+    } 
+  } 
+  #updates.section ul {
+    margin:0px;
+    padding:0px;
+    padding-left:17px;
+    li{
+      margin-top:20px;
+    }
+    p {
+      margin-top:5px;
+      padding-left:5px;
+    }
+  }
+  #about.section ul {
+    margin-left:18px;
+  }
+  #team.section{
+    ul {
+      list-style:none;  
+      padding:0px;
+      margin:0px;
+      li {
+        border-bottom: 1px solid #ddd;
+        padding-bottom:18px;
+        margin-bottom:18px;
+        &.last {
+          border-bottom: 0px solid #ddd;
+          padding-bottom:0px;
+          margin-bottom:0px;
+        }
+        .name {
+          font-size:15px;
+          font-weight:bold;
+        }
+        .role {
+          font-style:italic;
+          font-size:13px;
+          color:#777;
+        }
+        .about {
+          line-height: 150%;
+          margin-top: 8px;
+          width:64%;
+        }
+        .profile_photo {
+          border: 1px solid #DDDDDD;
+          float: right;
+          margin-right: 17px;
+          padding: 4px;
+          width: 120px;
+        }
+        .profile_twitter {
+          clear: right;
+          float: right;
+          margin-right: 18px;
+          margin-top: 1px;
+          opacity: 0.6;
+          width: 20px;
+          &:hover{
+            opacity: 0.8;
+          };
+        }
+      }
+
+    }
+  }
+  
+  #disclaimer.section{
+    .title{
+      padding-bottom:0px;
+      font-size:15px;
+      text-align:center;
+    }
+  }
+  #partners.section{
+    text-align:center;
+    text-transform:uppercase;
+    font-size:11px;
+    color:#888;
+    #ycc_logo img{
+      width:120px;
     }
   }
   
 }
 
-
-footer{
-  display:none;
-  width:100%;
-  height:1em;
-  padding-top:14px;
-  padding-bottom:14px;
-  position:absolute;
-  bottom:0px;
-  left:0px;
-  background-color: #EEE;
-  text-shadow: 0 1px 0 white;
-  @include innerShadow( 0, 5px, 15px, rgba(0,0,0,.025) );
+#homepage_floatbox{
+  .title {
+    border-bottom: 1px solid #DEDEDE;
+    font-size: 25px;
+    line-height: 142%;
+    margin-bottom: 17px;
+    padding-bottom:8px;
+    width: 100%;
+    color:#333;
+  }
+  input[type="email"], input[type="text"] {
+    padding:12px;
+    border: 1px solid #C3C3C3;
+    border-top: 1px solid #aaa;
+    background: #FAFAFA;
+    width:87.2%;
+		font-size: 13px;
+		display: inline-block;
+		height: 18px;
+		line-height: 18px;
+		color: #444;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+  }
+  input[type="text"]:placeholder {
+    color:#888;
+  }
+  .join_button {
+    background: $darkBlue;
+    border: 1px solid $darkBlue;
+    color: white;
+    font-size: 24px;
+    padding: 16px 46px;
+    margin-top: 18px;
+    border-radius:2px;
+    width: 55%;
+    text-align:center;
+		line-height:18px;
+  }
+ 	input.join_button{
+	width:210px;
 }
+  .join_button:hover {
+    background:#fff;
+    background:#E1E8EA;
+    color:#000;
+    border:1px solid #ccc;
+    cursor:pointer;
+  }
+
+  .error {
+    text-align: center;
+    background: #fbe3e4;
+    color: #8a1f11;
+    border: 1px solid #8a1f11;
+    padding: 1px 6px 1px 5px;
+    margin-top: 5px;
+    width: 181px;
+    font-size: 11px;
+  }
+  .error p {margin:0px;}
+
+  .success {
+    color: $darkBlue;
+    font-size:25px;
+    line-height: 142%;
+    padding-bottom: 8px;
+  }
+}
+
+#jobs{
+  ul.courses{
+    width:778px;
+  }
+  .right{
+    width: 140px !important;
+  }
+  .job_heading{
+    border-bottom: 1px solid #DEDEDE;
+    font-size: 17px;
+    line-height: 148%;
+    padding-bottom: 17px;
+  }
+  .job_img{
+    max-width:140px;
+  }
+}
+
+#extras{
+  h3{
+    margin-top:30px;
+  }
+}
+
+.red_text{color:#bd1e1e;}
+.blue_text{color:#2a4a8d;}
+.pink_text{color:#ff007f;}

@@ -1,40 +1,90 @@
-  <div class="container-fluid">
-    
-    <div class="sidebar">
-      <div id="fb_lists" class="well col">
-        <div id="list_clone" class="fblist" style="display:none">
-          <h3>Title</h3>
-          <label>
-            <input type="checkbox" value="yes"/>
-            <span>In list</span>
-          </label>
-          <label>
-            <input type="checkbox" value="no"/>
-            <span>Not in list</span>
-          </label>
+<div id="wrapper">
+  <div id="homepage" class="main_content" role="main">
+    <%= erb :mailchimp %>
+
+    <img class="logo" src="/images/layout/logo.png" />
+    <div class="subheading">Learn to build your ideas</div>
+    <div class="disclaimer_heading" style="font-size:12px; color:#888; display:none">HackYale is an undergraduate organization - open to all members of the Yale Community</div>
+    <div class="content">
+      <ul class="section">
+        <li><b>Develop</b> a valuable skill set</li>
+        <li><b>Compete</b> for better internships</li>
+        <li><b>Become</b> the technical co-founder you’ve been searching for</li>
+        <li><b>Start</b> building a portfolio</li>
+      </ul>
+
+      <div class="banner"> 
+        <img class="arrow" src="/images/layout/banner_arrow.png" />
+				<!--  Set the banner text here ----- -->
+        Sign up now for our Fall 2012 course!
+				<!-- -----------------------  -->
+      </div>
+			
+			
+      <div id="facebook_float">
+        <iframe id="fb_frame" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com/pages/HackYale/225114550877818&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=lucida+grande&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+        <a href="https://twitter.com/hackyale" class="twitter-follow-button" data-width="80px" data-show-count="false">Follow @hackyale</a>
+        <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+      </div>
+      
+      <div class="section" id="courses">
+        <div class="title">Courses</div>
+        <div class="body">
+          <ul class="courses">
+						
+						<%= erb :courses %>
+
+          </ul>
+        </div>
+      </div>    
+
+      <div class="section" id="workshops">
+        <div class="title">Workshops</div>
+        <div class="body">
+          <ul class="courses">
+						
+						<%= erb :workshops %>
+
+          </ul>
+        </div>
+      </div>            
+
+      <div class="section" id="about">
+        <div class="title">About</div>
+        <div class="body small">
+          <p>
+					HackYale provides student-run lectures
+					in web development, introductory
+					programming, and design.  
+          All classes and workshops are presented free-of-charge through 
+					our partnerships with the <a href='http://ycc.yale.edu/'>Yale College Council</a>
+					and the 
+					<a href='http://www.seas.yale.edu/ceid/'> Yale
+					Center for Engineering Innovation and Design.</a>
+          </p>
+ 					<p>
+ 					To learn more, please sign up for the HackYale
+          email list, or email <a href="mailto:team@hackyale.com">team@hackyale.com</a>.
+          </p>
         </div>
       </div>
-    </div><!-- sidebar -->
-    
-    <div class="content">
-      <div class="hero-unit col">
-        <div id="start">
-          <h2>Login to play!</h2>
-          <div id='fb_connect' class='login_box active'>
-            <div id='fb_login' class='facebook-button large'><span class='button-text'>Let's go!</span></div>
-            <p id='privacy_info'>Questions? Read our <a href='/privacy'>Privacy Policy</a></p>
+
+      <div class="section" id="team">
+        <div class="title">Team</div>
+        <ul class="body small">
+	
+        	<%= erb :team %>
+
+        </ul>
+        </div>
+        <div class="section last" id="partners">
+          <div id="ycc_logo">
+            Endorsed by <a href="http://ycc.yale.edu" target="_blank"><img src="./images/layout/ycc.png" /></a>
+          </div>
+          <div id="sub_disclaimer" style="margin-top:25px; font-size:11px; text-transform:none">
+            This organization is administered by Yale students, and Yale University neither endorses nor is responsible for its program and actions.
           </div>
         </div>
-        <div id="failed" class="alert-message block-message" style="display:none">Facebook login failed, please try again!</div>
-        <div id="success" style="display:none"> 
-            <div id="filter_status"></div>
-            <div id="filter_hint"></div>
-            <div id="fb_friends"></div>
-        </div>
-      </div>  
-    </div><!-- content -->
-    
-    <div class="clearfix">&nbsp;</div>
-  </div><!-- container fluid -->
-
-
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,39 @@
+<div class="right_section">
+  <div id="homepage_floatbox">   
+    <form id="join">                        
+        <div class="title">
+          Join our email list!
+        </div>
+        <p>Stay up to date on classes, workshops, events, and speakers.</p>
+        <input id='contact-email' type="text" name="email" placeholder= "signmeup@yale.edu" />
+
+        <div id="flash-success" class="success" style="display:none">
+          <p></p>
+        </div>
+        <div id="flash-error" class="error" style="display:none">
+          <p></p>
+        </div>
+        <div id='contact-submit' class='join_button'>Join</div>
+    </form>  
+  </div>
+</div>
+
+
+<script type='text/javascript'>
+
+var SENDING_FLAG = false;
+$('#contact-submit').click(function(){
+  if (SENDING_FLAG)
+    return;
+    
+  SENDING_FLAG = true;
+  $.ajax({
+    url: '/signup',
+    data: { email : $('#contact-email').val() },
+    success : HACKYALE_APP.showSuccess, 
+    error : HACKYALE_APP.showError,
+    complete : function(){ SENDING_FLAG = false; }
+  });
+});
+
+</script>

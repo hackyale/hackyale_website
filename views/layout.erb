@@ -1,42 +1,72 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-  "http://www.w3.org/TR/html4/strict.dtd">
-
+<!doctype html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Facebook Lists</title>
-  <meta name="author" content="Bay Gross">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-  <script>!window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');</script>
-  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
-  <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-twipsy.js" type="text/javascript"></script>
-  <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-popover.js" type="text/javascript"></script>
-  <script src="/javascripts/underscore.js" type="text/javascript"></script>
-  <script src="/javascripts/main.js" type="text/javascript"></script>
-  <link rel="stylesheet" type="text/css" href="stylesheets/main.css" media="screen" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title><%= @page_title %></title>
+	<meta name="description" content="HackYale is an open lecture and
+	                                  workshop series aimed at teaching Yale
+	                                  students the skills they’ll need to
+	                                  become successful internet
+	                                  entrepreneurs">
+	<meta name="author" content="HackYale">
+	<meta property="og:title" content="HackYale">
+	<meta property="og:site_name" content="HackYale">
+	<meta property="og:image" content="http://hackyale.com/img/logo.png">
+	<meta property="og:url" content="http://hackyale.com">
+	<meta property="og:type" content="course">
+	<meta property="fb:admins" content="1343225522">
+	<meta property="og:description" content="HackYale is an open lecture and
+	                                         workshop series for the Yale community.">
+	<meta name="google-site-verification" content="6-d7BJhXZ5TPdGGCGXIPK_EamcoqnclYhUmyaasl6jk" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
+  <script type="text/javascript" src="/javascripts/jquery.js"></script>
+	<script type="text/javascript" src="/javascripts/main.js"></script>
+  <script type="text/javascript" src="/javascripts/slideshow.js"></script>
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+	<link rel="stylesheet" href="/stylesheets/classes.css">
+	
 </head>
 <body>
 
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="container-fluid">
-        <a class="brand" href="/">Facebook Lists</a>
-        <ul class="nav">
-          <li class="<%= request.path_info == '/' ? '' : 'active' %>"><a href="/about">About</a></li>
-        </ul>
-        <p class="pull-right"><a id="logout" style="display:none" href="javascript:LogOut()">Logout</a></p>
-      </div>
-    </div>
-  </div>
+	<!--  simple header -->
+	<header>
+		<div class="main_content">
+			<a class="internal" href="<%= @current_action=='home' ? '#' : '/' %>">Home</a>
+			<a class="internal" href="<%= @current_action=='home' ? '#' : '/#' %>courses">Courses</a>
+			<a class="internal" href="<%= @current_action=='home' ? '#' : '/#' %>about">About</a>
+			<a class="internal" href="<%= @current_action=='home' ? '#' : '/#' %>team">Team</a>
+		<!--	| 				    
+			<a class="" href="/opportunities">Opportunities</a> -->
+		</div>
+	</header>
 
-<div id="spacer">&nbsp;</div>
+	<!--  background slideshow -->
+	<div id="bg_gradient" class="headerimg" >&nbsp;</div>
+	<div id="headerimgs">
+	  <img id="bgimg1" class="headerimg" src="/images/bg/bg1.jpg" />
+	  <img id="bgimg2" class="headerimg" />
 
-<%= yield %>
+	  <div id="preload" style="display:none">
+	    <img  src="/images/bg/bg1.jpg" />
+	    <img  src="/images/bg/bg2.jpg" />
+	    <img  src="/images/bg/bg3.jpg" />
+	    <img  src="/images/bg/bg4.jpg" />
+	  </div>
+	</div>
+	
+	<!-- page content -->
+	<div id="yield_wrap">
+		<%= yield %>
+	</div>
 
-  
-<!-- facebook code -->
-<%= erb :facebook %>
+	<!-- google analytics -->
+	<%= erb :google %>
+
+	<!-- gaug.es analytics -->
+	<%= erb :gauges %>
 
 
 </body>

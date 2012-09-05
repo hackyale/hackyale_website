@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#shotgun ./app.rb -p 3000
 
 #dependencies
 require 'rubygems'
@@ -8,3 +8,5 @@ require 'sass'
 
 #include routes
 require File.join(File.dirname(__FILE__), 'routes')
+
+
