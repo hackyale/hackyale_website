@@ -28,6 +28,9 @@
   <link rel="stylesheet" href="/stylesheets/main.css">
 	<link rel="stylesheet" href="/stylesheets/classes.css">
 	
+	<!-- google analytics -->
+	<%= erb :google %>
+	
 </head>
 <body>
 
@@ -61,13 +64,6 @@
 	<div id="yield_wrap">
 		<%= yield %>
 	</div>
-
-	<!-- google analytics -->
-	<%= erb :google %>
-
-	<!-- gaug.es analytics -->
-	<%= erb :gauges %>
-
 
 </body>
 </html>
