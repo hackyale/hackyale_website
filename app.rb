@@ -1,5 +1,3 @@
-#shotgun ./app.rb -p 3000
-
 #dependencies
 require 'rubygems'
 require 'bundler/setup'
