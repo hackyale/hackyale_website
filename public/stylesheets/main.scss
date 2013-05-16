@@ -155,11 +155,11 @@ header  {
     padding: 28px 38px 38px;
     display:inline-block;
   }
-  .courses {
+  .courses, .listings {
     list-style: none;
     margin: 0px;
     padding: 0px;
-    li {
+    >li {
       list-style: none;
       border: 1px solid #C3C3C3;
       border-top: 1px solid #aaa;
@@ -207,7 +207,7 @@ header  {
         }
       }
     }
-  }    
+  }
 }
 .apply_button {
   background: $darkBlue;
@@ -232,8 +232,8 @@ header  {
 .main_content{
   #facebook_float{
     position: absolute;
-    right: 6px;
-    top: -136px;
+    right: 44px;
+    top: 69px;
     >iframe{
       float:right;
       clear:right;
@@ -334,7 +334,52 @@ header  {
   #about.section ul {
     margin-left:18px;
   }
-  #team.section{
+  #team.section, #jobs.section{
+    ul {
+      .name {
+        font-size:18px;
+        font-weight:bold;
+      }
+      .about {
+        line-height: 150%;
+        margin-top: 8px;
+        width:64%;
+        margin-bottom: 10px;
+      }
+      .role {
+        font-style:italic;
+        font-size:13px;
+        color:#777;
+      }
+      .position {
+        font-size: 14px;
+      }
+      .contact_info {
+        margin-top: 9px;
+      }
+      .contact {
+        font-weight: bold;
+      }
+      .profile_photo {
+        border: 1px solid #DDDDDD;
+        float: right;
+        padding: 4px;
+        width: 120px;
+      }
+      .profile_twitter {
+        clear: right;
+        float: right;
+        margin-right: 18px;
+        margin-top: 1px;
+        opacity: 0.6;
+        width: 20px;
+        &:hover{
+          opacity: 0.8;
+        };
+      }
+    }
+  }
+  #team.section {
     ul {
       list-style:none;  
       padding:0px;
@@ -348,43 +393,36 @@ header  {
           padding-bottom:0px;
           margin-bottom:0px;
         }
-        .name {
-          font-size:15px;
-          font-weight:bold;
-        }
-        .role {
-          font-style:italic;
-          font-size:13px;
-          color:#777;
-        }
-        .about {
-          line-height: 150%;
-          margin-top: 8px;
-          width:64%;
-        }
         .profile_photo {
-          border: 1px solid #DDDDDD;
-          float: right;
           margin-right: 17px;
-          padding: 4px;
-          width: 120px;
-        }
-        .profile_twitter {
-          clear: right;
-          float: right;
-          margin-right: 18px;
-          margin-top: 1px;
-          opacity: 0.6;
-          width: 20px;
-          &:hover{
-            opacity: 0.8;
-          };
         }
       }
-
     }
+
   }
-  
+  #jobs.section {
+    .listings {
+        list-style:none;  
+        padding:0px;
+        margin:0px;
+        .listing {
+          border-bottom: 1px solid #ddd;
+          padding-bottom:18px;
+          margin-bottom:18px;
+          &.last {
+            border-bottom: 0px solid #ddd;
+            padding-bottom:0px;
+            margin-bottom:0px;
+          }
+          .profile_photo {
+            margin-right: 0;
+          }
+        }
+    }
+
+
+  }
+
   #disclaimer.section{
     .title{
       padding-bottom:0px;
@@ -476,8 +514,11 @@ header  {
 }
 
 #jobs{
-  ul.courses{
+  ul.listings{
     width:778px;
+    ul {
+      padding-left: 16px;
+    }
   }
   .right{
     width: 140px !important;

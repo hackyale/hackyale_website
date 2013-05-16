@@ -1,5 +1,5 @@
 $(document).ready(function($) {
-    
+
    // smooth scrolling
    $('.internal').click(function(e){
        e.stopPropagation();
@@ -7,12 +7,30 @@ $(document).ready(function($) {
        offset = $target.offset().top - 51; //for header bar
        $('body').animate({scrollTop: offset}, 400);
    });
-   
+
+   $('.read_more').click(function(e) {
+     var that = $(this);
+     that.parent().parent().find('.more_reading').slideToggle();
+     that.text(toggleMoreLess(that.text()));
+   });
+
 });
 
 $(window).load(function(){
     $('body').animate({scrollTop: window.pageYOffset-51});
 });
+
+function toggleMoreLess(str) {
+  if (/more/.test(str)) {
+    return str.replace('more', 'less');
+  }
+  else if (/less/.test(str)) {
+    return str.replace('less', 'more');
+  }
+  else {
+    return 'uh oh';
+  }
+}
 
 HACKYALE_APP = {
 	
