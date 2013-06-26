@@ -16,6 +16,14 @@ $(document).ready(function($) {
 
    });
 
+   $('.jobs-nav-item').click(function(e) {
+     e.preventDefault();
+     $target = $( $(this).find('a').attr('href') );
+     offset = $target.offset().top - 51; //for header bar
+     $('body').animate({scrollTop: offset}, 400);
+
+   });
+
 });
 
 $(window).load(function(){

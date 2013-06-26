@@ -562,6 +562,29 @@ header  {
         font-weight: bold;
         margin-top: 8px;
     }
+    .jobs-nav-wrapper {
+        margin-top: 18px;
+        margin-bottom: -21px;
+        padding: 10px 0;
+        text-align: center;
+        border: 1px solid #C3C3C3;
+        border-top: 1px solid #AAA;
+        border-bottom: 1px solid #DDD;
+        background-color: rgba(252, 252, 252, 0.95);
+        width: 778px;
+        .jobs-nav {
+            width: 640px;
+            margin: 0 auto;
+            li {
+                margin-left: 20px;
+                list-style-type: none;
+                float: left;
+            }
+            .first {
+                margin-left: 0;
+            }
+        }
+    }
   }
   .right{
     width: 140px !important;
