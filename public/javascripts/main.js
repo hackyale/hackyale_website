@@ -12,9 +12,7 @@ $(document).ready(function($) {
      e.preventDefault();
      var that = $(this);
      var moreReading = that.parent().parent().find('.more_reading');
-     moreReading.append(that);
-     moreReading.slideToggle();
-     that.text(toggleMoreLess(that.text()));
+     that.text(toggleMoreLess(that, moreReading));
 
    });
 
@@ -24,11 +22,17 @@ $(window).load(function(){
     $('body').animate({scrollTop: window.pageYOffset-51});
 });
 
-function toggleMoreLess(str) {
+function toggleMoreLess(el, moreReading) {
+  var str = el.text();
   if (/more/.test(str)) {
+    moreReading.append(el);
+    moreReading.slideToggle();
     return str.replace('more', 'less');
   }
   else if (/less/.test(str)) {
+    moreReading.slideToggle(function() {
+      el.parent().parent().find('.role').append(el);
+    });
     return str.replace('less', 'more');
   }
   else {
@@ -37,14 +41,14 @@ function toggleMoreLess(str) {
 }
 
 HACKYALE_APP = {
-	
+
 	showError: function( response ) {
 	  var errorMessage = response.responseText;
 		$( '#flash-success' ).hide();
 		$( '#flash-error p' ).html( errorMessage );
 		$( '#flash-error' ).show();
 	},
-  
+
 	showSuccess: function( response ) {
 	  var successMessage = response.responseText;
 		$( '#flash-error' ).css( 'display', 'none' );
