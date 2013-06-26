@@ -346,11 +346,6 @@ header  {
         width:64%;
         margin-bottom: 10px;
       }
-      .role {
-        font-style:italic;
-        font-size:13px;
-        color:#777;
-      }
       .position {
         font-size: 14px;
       }
@@ -398,7 +393,11 @@ header  {
         }
       }
     }
-
+    .role, .more_reading {
+      font-style:italic;
+      font-size:13px;
+      color:#777;
+    }
   }
   #jobs.section {
     .listings {
@@ -419,6 +418,29 @@ header  {
           }
         }
     }
+    .about {
+      color:#555;
+    }
+    .role, .more_reading {
+      font-style:italic;
+      font-size:13px;
+      color:#555;
+    }
+
+    .more_reading {
+    }
+
+    .position {
+        margin-bottom: 20px;
+    }
+
+    .positions {
+        ul {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
 
 
   }
@@ -517,7 +539,10 @@ header  {
   ul.listings{
     width:778px;
     ul {
-      padding-left: 16px;
+       padding: 0;
+       ul {
+           padding-left: 16px;
+       }
     }
   }
   .right{

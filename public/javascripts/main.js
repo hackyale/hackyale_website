@@ -9,9 +9,13 @@ $(document).ready(function($) {
    });
 
    $('.read_more').click(function(e) {
+     e.preventDefault();
      var that = $(this);
-     that.parent().parent().find('.more_reading').slideToggle();
+     var moreReading = that.parent().parent().find('.more_reading');
+     moreReading.append(that);
+     moreReading.slideToggle();
      that.text(toggleMoreLess(that.text()));
+
    });
 
 });
