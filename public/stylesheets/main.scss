@@ -536,13 +536,25 @@ header  {
 }
 
 #jobs{
+  .title {
+    font-size: 36px !important;
+  }
   ul.listings{
     width:778px;
+    h2 {
+      font-size: 30px !important;
+      height: 38px;
+      padding-top: 5px;
+    }
+    h3 {
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
     ul {
-       padding: 0;
-       ul {
-           padding-left: 16px;
-       }
+      padding: 0;
+      ul {
+          padding-left: 16px;
+      }
     }
   }
   .right{
