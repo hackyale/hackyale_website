@@ -63,6 +63,7 @@ header  {
   border-bottom: 1px solid #AAAAAA;
   font-size: 12px;
   left: 0;
+  top: 0;
   opacity: 0.95;
   padding: 10px 0 6px;
   position: fixed;
@@ -157,7 +158,6 @@ header  {
     margin-top: 39px;
     margin-bottom:50px;
     padding: 28px 38px 38px;
-    display:inline-block;
   }
   .courses, .listings {
     list-style: none;
@@ -577,7 +577,7 @@ header  {
         background-color: rgba(252, 252, 252, 0.95);
         width: 778px;
         .jobs-nav {
-            width: 700px;
+            width: 722px;
             margin: 0 auto;
             li {
                 margin-left: 20px;
