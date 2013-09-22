@@ -404,6 +404,9 @@ header  {
     }
   }
   #jobs.section {
+    ul .about {
+      width: 75%;
+    }
     .listings {
         list-style:none;  
         padding:0px;
@@ -467,7 +470,7 @@ header  {
       width:120px;
     }
   }
-  
+
 }
 
 #homepage_floatbox{
