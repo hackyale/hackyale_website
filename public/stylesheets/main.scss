@@ -580,8 +580,12 @@ header  {
         background-color: rgba(252, 252, 252, 0.95);
         width: 778px;
         .jobs-nav {
+            .jobs-nav-section {
+                margin: 0 auto;
+            }
             width: 722px;
             margin: 0 auto;
+            text-align: center;
             li {
                 margin-left: 20px;
                 list-style-type: none;
