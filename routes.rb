@@ -3,6 +3,10 @@ get '/' do
   erb :index
 end
 
+get '/jobs' do
+  erb :jobs
+end
+
 #panel pages, handle anchor redirects
 pages = %w[about courses team]
 route_rgx = %r{^/(#{pages.join '|'})$}i # case-insensitive

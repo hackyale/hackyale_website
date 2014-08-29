@@ -19,7 +19,7 @@
 	<meta property="og:description" content="HackYale is an open lecture and
 	                                         workshop series for the Yale community.">
 	<meta name="google-site-verification" content="6-d7BJhXZ5TPdGGCGXIPK_EamcoqnclYhUmyaasl6jk" />
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=4">
 
   <script type="text/javascript" src="/javascripts/jquery.js"></script>
 	<script type="text/javascript" src="/javascripts/main.js"></script>
@@ -27,24 +27,12 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/stylesheets/main.css">
 	<link rel="stylesheet" href="/stylesheets/classes.css">
-	
+
 	<!-- google analytics -->
 	<%= erb :google %>
 	
 </head>
 <body>
-
-	<!--  simple header -->
-	<header>
-		<div class="main_content">
-			<a class="internal" href="<%= @current_action=='home' ? '#' : '/' %>">Home</a>
-			<a class="internal" href="<%= @current_action=='home' ? '#' : '/#' %>courses">Courses</a>
-			<a class="internal" href="<%= @current_action=='home' ? '#' : '/#' %>about">About</a>
-			<a class="internal" href="<%= @current_action=='home' ? '#' : '/#' %>team">Team</a>
-		<!--	| 				    
-			<a class="" href="/opportunities">Opportunities</a> -->
-		</div>
-	</header>
 
 	<!--  background slideshow -->
 	<div id="bg_gradient" class="headerimg" >&nbsp;</div>
