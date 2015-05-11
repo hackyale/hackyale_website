@@ -1,9 +1,9 @@
-#HackYale Website
+# HackYale Website
 
 The sinatra app behind [hackyale](http://hackyale.com).
 
 
-#TO RUN
+# TO RUN
 
 1) Install dependencies (RVM recommended here...)
 >  bundle install
