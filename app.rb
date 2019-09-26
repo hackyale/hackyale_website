@@ -1,4 +1,3 @@
-#dependencies
 require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
@@ -8,7 +7,5 @@ configure :production do
   require 'newrelic_rpm'
 end
 
-#include routes
+# Include routes
 require File.join(File.dirname(__FILE__), 'routes')
-
-
