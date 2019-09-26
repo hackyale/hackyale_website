@@ -9,7 +9,7 @@
     <div class="main_content jobs_wrapper">
 
         <img class="logo" src="/images/layout/logo.png" />
-        <%= erb :social %>
+        {% include "social.html" %}
 
         <div class="content" style="border:none;">
             <div class="section jobs" id="jobs" style="border:none;">
@@ -69,17 +69,17 @@
                                 <div class="clearfix"></div>
                             </ul>
                         </div>
-                        <%= erb :"jobs/warby_parker" %>
-                        <%= erb :"jobs/artsy" %>
-                        <%= erb :"jobs/urban_compass" %>
-                        <%= erb :"jobs/yipit" %>
-                        <%= erb :"jobs/brewster" %>
-                        <%= erb :"jobs/mongodb" %>
-                        <%= erb :"jobs/harrys" %>
-                        <%= erb :"jobs/amicus" %>
-                        <%= erb :"jobs/panorama" %>
-                        <%= erb :"jobs/see_click_fix" %>
-                        <%= erb :"jobs/three_derm" %>
+                        {% include "jobs/warby_parker" %}
+                        {% include "jobs/artsy" %}
+                        {% include "jobs/urban_compass" %}
+                        {% include "jobs/yipit" %}
+                        {% include "jobs/brewster" %}
+                        {% include "jobs/mongodb" %}
+                        {% include "jobs/harrys" %}
+                        {% include "jobs/amicus" %}
+                        {% include "jobs/panorama" %}
+                        {% include "jobs/see_click_fix" %}
+                        {% include "jobs/three_derm" %}
                     </ul>
                 </div>
             </div>

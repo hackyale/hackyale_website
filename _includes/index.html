@@ -1,12 +1,13 @@
-
-<%= erb :header %>
+---
+layout: default
+---
 
 <div id="wrapper">
   <div id="homepage" class="main_content" role="main">
-    <%= erb :mailchimp %>
+    {% include "mailchimp.html" %}
 
     <img class="logo" src="/images/layout/logo.png" />
-    <%= erb :social %>
+    {% include "social.html" %}
 
     <div class="subheading">Learn to build your ideas</div>
     <div class="disclaimer_heading" style="font-size:12px; color:#888; display:none">HackYale is an undergraduate organization - open to all members of the Yale Community</div>
@@ -37,7 +38,7 @@
           <div class="title">Courses</div>
           <div class="body">
             <ul class="courses">
-              <%= erb :courses %>
+                {% include "courses.html" %}
             </ul>
           </div>
         </div>
@@ -45,9 +46,7 @@
         <div class="section" id="about">
           <div class="title">About</div>
           <div class="body small">
-            <p>
-            HackYale is an organization for students to teach other students various topics and tools in software development with an emphasis on real-world applications. It provides free student-run lectures in web development, introductory programming, and design.
-            </p>
+            <p>HackYale is an organization for students to teach other students various topics and tools in software development with an emphasis on real-world applications. It provides free student-run lectures in web development, introductory programming, and design.</p>
             <p>
             In past years, the students who participated in HackYale have gone on to intern or work at companies like
             <a href="http://artsy.net">Artsy</a>,
@@ -74,7 +73,7 @@
         <div class="section" id="team">
           <div class="title">Team</div>
           <ul class="body small">
-            <%= erb :team %>
+              {% include "team.html" %}
           </ul>
         </div>
         <div class="section last" id="partners">

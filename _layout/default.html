@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>HackYale | Learn to build your ideas.</title>
+        <meta name="description" content="HackYale is an open lecture and
+                                          workshop series aimed at teaching Yale
+                                          students the skills they’ll need to
+                                          become successful internet
+                                          entrepreneurs">
+        <meta name="author" content="HackYale">
+        <meta property="og:title" content="HackYale">
+        <meta property="og:site_name" content="HackYale">
+        <meta property="og:image" content="http://hackyale.com/img/logo.png">
+        <meta property="og:url" content="http://hackyale.com">
+        <meta property="og:type" content="course">
+        <meta property="fb:admins" content="1343225522">
+        <meta property="og:description" content="HackYale is an open lecture and
+                                                 workshop series for the Yale community.">
+        <meta name="google-site-verification" content="6-d7BJhXZ5TPdGGCGXIPK_EamcoqnclYhUmyaasl6jk" />
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=4">
+
+        <script type="text/javascript" src="/javascripts/jquery.js"></script>
+        <script type="text/javascript" src="/javascripts/main.js"></script>
+        <script type="text/javascript" src="/javascripts/slideshow.js"></script>
+        <link rel="shortcut icon" href="/images/favicon.ico">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+        <link rel="stylesheet" href="/stylesheets/classes.css">
+
+        <!-- google analytics -->
+        {% include "google.html" %}
+
+    </head>
+    <body>
+
+        <!--  background slideshow -->
+        <div id="bg_gradient" class="headerimg" >&nbsp;</div>
+        <div id="headerimgs">
+            <img id="bgimg1" class="headerimg" src="/images/bg/bg1.jpg" />
+            <img id="bgimg2" class="headerimg" />
+
+            <div id="preload" style="display:none">
+                <img src="/images/bg/bg1.jpg" />
+                <img src="/images/bg/bg2.jpg" />
+                <img src="/images/bg/bg3.jpg" />
+                <img src="/images/bg/bg4.jpg" />
+            </div>
+        </div>
+
+        <!-- page content -->
+        <div id="yield_wrap">
+            {{ content }}
+        </div>
+
+    </body>
+</html>
