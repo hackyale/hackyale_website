@@ -1,9 +1,9 @@
-$darkBlue: #2F6598;
+$darkBlue: #00356b;
 $lightBlue: #E1E8FB;
-$medBlue: #3879B6;
 $pink: #ec008c;
+$fonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-//MIXINS
+// MIXINS
 @mixin roundedCorners($rad) {
     -webkit-border-radius: $rad $rad;
     -moz-border-radius: #{$rad} / #{$rad};
@@ -11,25 +11,6 @@ $pink: #ec008c;
     -ms-border-radius: #{$rad} / #{$rad};
     -khtml-border-radius: #{$rad} / #{$rad};
     border-radius: #{$rad};
-}
-
-@mixin bgGradient($a,$b) {
-    /* FireFox 3.6 */
-    background-image: -moz-linear-gradient(top, $a, $b);
-    /* Safari4+, Chrome */
-    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $a),color-stop(1, $b));
-    /* IE6,IE7 */
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$a}', endColorstr='#{$b}');
-    /* IE8 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$a}', endColorstr='#{$b}')";
-}
-
-@mixin opacity($a) {
-    //Normal Browsers
-    opacity: $a;
-    // for IE5-7
-    filter: alpha(opacity=#{$a * 100});
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$a * 100})";
 }
 
 @mixin dropShadow($a, $b, $c, $d){ //eg: 2px 2px 4px #000

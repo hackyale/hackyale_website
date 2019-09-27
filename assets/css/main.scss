@@ -3,44 +3,36 @@
 @import "fixes";
 @import "common-vars";
 
-/* ==|== primary styles =====================================================
-Author: Brennan Moore @zamiang
-========================================================================== */
-
 html {
-    height:100%;
-    overflow-x:hidden;
-    overflow-y:auto;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
     body {
-        color:#333;
-        direction:ltr;
-        font-size:13px;
-        font-family: "Helvetica Neue", Helvetica, Arial;
-        font-weight:normal;
-        line-height:142%;
-        padding:0px;
-        margin:0px;
-        height:auto;
-        min-height:100%;
-    }
-}
+        color: #333;
+        direction: ltr;
+        font-size: 13px;
+        font-family: $fonts;
+        font-weight: normal;
+        line-height: 142%;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        min-height: 100%;
 
-#bg_gradient{
-    z-index:-8;
-    /* Background Gradient */
-    background: linear-gradient(top, rgba(253,253,253,1) 0%,rgba(243,243,243,1) 100%);
+        background: linear-gradient(top, rgba(253,253,253,1) 0%,rgba(243,243,243,1) 100%);
+    }
 }
 
 a, a:visited {
     text-decoration: none;
-    color:$darkBlue;
-    border:none;
+    color: $darkBlue;
+    border: none;
     cursor: pointer;
 }
 a:active, a:hover {
-    color:$pink;
+    color: $pink;
     text-decoration: underline;
-    color:$pink;
+    color: $pink;
 }
 
 .bold {
@@ -48,12 +40,12 @@ a:active, a:hover {
 }
 
 
-header  {
+header {
     padding: 6px;
     padding-top: 15px;
-    font-family: "Helvetica Neue",Helvetica,Arial,default;
+    font-family: $fonts;
     font-size: 12px;
-    z-index:10;
+    z-index: 10;
     background: $darkBlue;
     border-bottom: 1px solid #AAAAAA;
     font-size: 12px;
@@ -80,18 +72,6 @@ header  {
     }
 }
 
-//----------  SlideShow
-.headerimg {
-    display:block;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 0;
-}
-
-
 //main layout
 #wrapper{
     width: 860px;
@@ -100,10 +80,10 @@ header  {
     margin-bottom:5px;
     z-index: 1;
     position: relative;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $fonts;
     .banner {
         margin-top: 0px;
-        background: $medBlue;
+        background: $darkBlue;
         color: white;
         padding: 15px;
         font-weight: bold;
@@ -116,7 +96,6 @@ header  {
             padding-right:0px;
         }
         position: relative;
-        border-bottom: 1px solid #254360;
         .arrow {
             position: absolute;
             bottom: -14px;
@@ -124,28 +103,12 @@ header  {
             width: 14px;
         }
     }
-    .right_section {
-        margin: 0;
-        position: absolute;
-        right: 0;
-        top: 108px;
-        width: 21.6%;
-        z-index:10;
-        width: 210px;
-        margin-right: 38px;
-    }
     .main_content {
         margin-left:auto;
         margin-right:auto;
         margin-bottom:5px;
         z-index: 1;
         position:relative;
-        &.full{
-            width: 900px;
-            min-height:500px;
-        }
-    }
-    .main_content, .right_section {
         border: 1px solid #C3C3C3;
         border-top: 1px solid #aaa;
         background: #FAFAFA;
@@ -153,6 +116,10 @@ header  {
         margin-top: 39px;
         margin-bottom:50px;
         padding: 28px 38px 38px;
+        &.full{
+            width: 900px;
+            min-height:500px;
+        }
     }
     .courses, .listings {
         list-style: none;
@@ -288,7 +255,6 @@ header  {
         .section {
             padding-bottom:20px;
             padding-top:20px;
-            border-bottom:1px solid #dedede;
             &.last {
                 border-bottom:0px solid #dedede;
                 padding-bottom:0px;
