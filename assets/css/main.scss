@@ -1,3 +1,5 @@
+---
+---
 @import "fixes";
 @import "common-vars";
 
@@ -104,7 +106,7 @@ header  {
   margin-right:auto;
   margin-bottom:5px;
   z-index: 1;
-  position:relative; 
+  position:relative;
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
   .banner {
     margin-top: 0px;
@@ -251,7 +253,7 @@ header  {
     #fb_frame{
       margin-right:0px;
       margin-top:0px;
-    }    
+    }
   }
   .super {
     font-weight:bold;
@@ -269,7 +271,7 @@ header  {
   &.course {
     h1 {
       font-size: 48px;
-      font-weight: bold;        
+      font-weight: bold;
       line-height:150%;
     }
     .subheading {
@@ -318,15 +320,15 @@ header  {
       margin: 0;
       padding-bottom: 16px;
       padding-left: 17px;
-      padding-top: 20px;            
+      padding-top: 20px;
       li {
         padding-bottom:5px;
         &.last {
           border-bottom: 0px;
         }
       }
-    } 
-  } 
+    }
+  }
   #updates.section ul {
     margin:0px;
     padding:0px;
@@ -384,7 +386,7 @@ header  {
   }
   #team.section {
     ul {
-      list-style:none;  
+      list-style:none;
       padding:0px;
       margin:0px;
       li {
@@ -412,7 +414,7 @@ header  {
       width: 75%;
     }
     .listings {
-        list-style:none;  
+        list-style:none;
         padding:0px;
         margin:0px;
         .listing {
