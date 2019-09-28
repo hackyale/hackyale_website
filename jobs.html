@@ -7,8 +7,8 @@ layout: default
         <img class="logo" src="/images/layout/logo.png" />
         {% include social.html %}
 
-        <div class="content" style="border:none;">
-            <div class="section jobs" id="jobs" style="border:none;">
+        <div class="content">
+            <section class="jobs" id="jobs">
                 <div class="title">Job Opportunities</div>
                 <div class="subtitle">
                     You're brilliant? They're hiring! HackYale
@@ -18,53 +18,44 @@ layout: default
                     positions.
                 </div>
                 <div class="body">
+                    <section>
+                        <ul class="jobs-nav">
+                            <li class="jobs-nav-item first">
+                                <a href="#warby">Warby Parker</a>
+                            </li>
+                            <li class="jobs-nav-item">
+                                <a href="#artsy">Artsy</a>
+                            </li>
+                            <li class="jobs-nav-item">
+                                <a href="#urban">Urban Compass</a>
+                            </li>
+                            <li class="jobs-nav-item">
+                                <a href="#yipit">Yipit</a>
+                            </li>
+                            <li class="jobs-nav-item">
+                                <a href="#brewster">brewster</a>
+                            </li>
+                            <li class="jobs-nav-item">
+                                <a href="#mongodb">MongoDB</a>
+                            </li>
+                            <li class="jobs-nav-item">
+                                <a href="#harrys">Harrys</a>
+                            </li>
+                            <li class="jobs-nav-item">
+                                <a href="#amicus">Amicus</a>
+                            </li>
+                            <li class="jobs-nav-item">
+                                <a href="#panorama">Panorama</a>
+                            </li>
+                            <li class="jobs-nav-item">
+                                <a href="#seeclickfix">SeeClickFix</a>
+                            </li>
+                            <li class="jobs-nav-item">
+                                <a href="#three_derm">3Derm</a>
+                            </li>
+                        </ul>
+                    </section>
                     <ul class="listings">
-                        <div class="jobs-nav-wrapper">
-                            <ul class="jobs-nav">
-                                <div class="jobs-nav-section"
-                                    style="width:445px;">
-                                    <li class="jobs-nav-item first">
-                                        <a href="#warby">Warby Parker</a>
-                                    </li>
-                                    <li class="jobs-nav-item">
-                                        <a href="#artsy">Artsy</a>
-                                    </li>
-                                    <li class="jobs-nav-item">
-                                        <a href="#urban">Urban Compass</a>
-                                    </li>
-                                    <li class="jobs-nav-item">
-                                        <a href="#yipit">Yipit</a>
-                                    </li>
-                                    <li class="jobs-nav-item">
-                                        <a href="#brewster">brewster</a>
-                                    </li>
-                                    <li class="jobs-nav-item">
-                                        <a href="#mongodb">MongoDB</a>
-                                    </li>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="jobs-nav-section"
-                                    style="width:335px;margin-top:4px;">
-                                    <li class="jobs-nav-item first">
-                                        <a href="#harrys">Harrys</a>
-                                    </li>
-                                    <li class="jobs-nav-item">
-                                        <a href="#amicus">Amicus</a>
-                                    </li>
-                                    <li class="jobs-nav-item">
-                                        <a href="#panorama">Panorama</a>
-                                    </li>
-                                    <li class="jobs-nav-item">
-                                        <a href="#seeclickfix">SeeClickFix</a>
-                                    </li>
-                                    <li class="jobs-nav-item">
-                                        <a href="#three_derm">3Derm</a>
-                                    </li>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </div>
                         {% include jobs/warby_parker.html %}
                         {% include jobs/artsy.html %}
                         {% include jobs/urban_compass.html %}
@@ -78,7 +69,7 @@ layout: default
                         {% include jobs/three_derm.html %}
                     </ul>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 </div>
