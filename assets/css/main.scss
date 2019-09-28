@@ -21,7 +21,7 @@ html {
         margin: 0;
         height: 100%;
 
-        background: linear-gradient(to bottom right, $darkBlue, $lightBlue);
+        background: $medBlue;
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
@@ -34,9 +34,7 @@ a, a:visited {
     cursor: pointer;
 }
 a:active, a:hover {
-    color: $pink;
     text-decoration: underline;
-    color: $pink;
 }
 
 .bold {
@@ -108,12 +106,11 @@ header {
     main {
         margin-left:auto;
         margin-right:auto;
-        margin-bottom:5px;
+        margin-top: 39px;
+        margin-bottom:50px;
         z-index: 1;
         position:relative;
         background: white;
-        margin-top: 39px;
-        margin-bottom:50px;
         padding: 28px 38px 38px;
         &.full{
             width: 900px;
@@ -217,15 +214,14 @@ main{
         font-size: 36px;
         line-height: 144%;
         margin-top: 4px;
+        margin-bottom: 0;
     }
     .content {
-        border-top:1px solid #ccc;
         position:relative;
         section {
             padding: 20px 0;
             &:last-child {
-                border-bottom:0px solid #dedede;
-                padding-bottom:0px;
+                padding-bottom: 0;
             }
             .title {
                 font-size: 36px;
@@ -237,6 +233,7 @@ main{
             font-size: 16px;
             line-height: 165%;
             margin: 0;
+            padding-left: 15px;
             li {
                 padding-bottom:5px;
                 &.last {
@@ -267,10 +264,8 @@ main{
                 font-weight: bold;
             }
             .profile_photo {
-                border: 1px solid #DDDDDD;
                 float: right;
-                padding: 4px;
-                width: 120px;
+                width: 140px;
             }
             .profile_twitter {
                 clear: right;
@@ -304,9 +299,8 @@ main{
                 }
             }
         }
-        .role, .more_reading {
+        .role {
             font-style:italic;
-            font-size:13px;
             color:#777;
         }
     }
@@ -335,12 +329,10 @@ main{
         .about {
             color:#555;
         }
-        .role, .more_reading {
+        .role {
             li {
                 font-style:italic;
             }
-            font-size:13px;
-            color:#555;
         }
 
         .more_reading {
@@ -377,51 +369,25 @@ main{
 }
 
 #jobs{
-    .title {
-        font-size: 36px !important;
+    h3 {
+        margin-bottom: 8px;
+        font-size: 16px;
     }
-    ul.listings{
-        h3 {
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
+    ul {
+        padding: 0;
         ul {
-            padding: 0;
-            ul {
-                padding-left: 16px;
-            }
-        }
-        .spaced {
-            font-weight: bold;
-            margin-top: 8px;
-        }
-        .jobs-nav {
-            margin-top: 18px;
-            margin-bottom: -21px;
-            padding: 10px 0;
-            text-align: center;
-            border-bottom: 1px solid #DDD;
-            background-color: rgba(252, 252, 252, 0.95);
-            width: 778px;
-            margin: 0 auto;
-            text-align: center;
-            li {
-                margin-left: 20px;
-                list-style-type: none;
-                float: left;
-            }
+            padding-left: 16px;
         }
     }
-    .right{
-        width: 140px !important;
-    }
-    .job_heading{
-        border-bottom: 1px solid #DEDEDE;
-        font-size: 17px;
-        line-height: 148%;
-        padding-bottom: 17px;
-    }
-    .job_img{
-        max-width:140px;
+    .jobs-nav {
+        list-style-type: none;
+        text-align: center;
+        margin-bottom: 5px;
+        margin: 0 auto;
+        width: 60%;
+        li {
+            display: inline;
+            margin: 0 4px;
+        }
     }
 }
