@@ -1,0 +1,8 @@
+{% for member in site.data.members %}
+<li>
+    <img class="profile_photo" src="/images/team/dalya.jpg">
+    <div class="name">{{ member.name }}</div>
+    <div class="role">{{ member.role }}</div>
+    <div class="about">{{ member.about }}</div>
+</li>
+{% endfor %}

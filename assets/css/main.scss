@@ -1,0 +1,393 @@
+---
+---
+@import "common-vars";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    body {
+        color: #333;
+        direction: ltr;
+        font-size: 16px;
+        font-family: $fonts;
+        font-weight: normal;
+        line-height: 142%;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+
+        background: $medBlue;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: $darkBlue;
+    border: none;
+    cursor: pointer;
+}
+a:active, a:hover {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+header {
+    padding: 6px;
+    padding-top: 15px;
+    font-family: $fonts;
+    font-size: 12px;
+    z-index: 10;
+    background: $darkBlue;
+    font-size: 12px;
+    left: 0;
+    top: 0;
+    padding: 10px 0 6px;
+    position: fixed;
+    width: 100%;
+    color:#f3f3f3;
+    >div{
+        width: 888px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:5px;
+        z-index: 1;
+        position:relative;
+    }
+    a, a:visited {
+        margin-right:20px;
+        margin-left:20px;
+        font-weight:bold;
+        color:#f3f3f3;
+    }
+}
+
+//main layout
+#wrapper{
+    width: 860px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5px;
+    z-index: 1;
+    position: relative;
+    font-family: $fonts;
+    .banner {
+        margin-top: 0px;
+        background: $darkBlue;
+        color: white;
+        padding: 15px;
+        font-weight: bold;
+        font-size: 16px;
+        margin-left: -53px;
+        padding-left: 52px;
+        width: 62%;
+        &.full_width{
+            width:100%;
+            padding-right:0px;
+        }
+        position: relative;
+        .arrow {
+            position: absolute;
+            bottom: -14px;
+            left: 0px;
+            width: 14px;
+        }
+    }
+    main {
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 39px;
+        margin-bottom:50px;
+        z-index: 1;
+        position:relative;
+        background: white;
+        padding: 28px 38px 38px;
+        &.full{
+            width: 900px;
+            min-height:500px;
+        }
+    }
+    .courses, .listings {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        >li {
+            list-style: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 26px;
+            padding: 30px;
+            .left {
+                display:inline-block;
+                width: 514px;
+                .name {
+                    font-size: 28px;
+                    font-weight: bold;
+                    line-height: 145%;
+                    border-bottom: 1px solid #BBB;
+                    margin-bottom: 15px;
+                    padding-bottom: 12px;
+                }
+                .stub {
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+                .description {
+                }
+            }
+            .right {
+                float: right;
+                text-align: center;
+                width: 180px;
+                vertical-align:top;
+                margin-top:21px;
+                .difficulty {
+                    font-style: italic;
+                    color: #666;
+                }
+            }
+        }
+    }
+}
+.apply_button {
+    background: $darkBlue;
+    color: white !important;
+    font-size: 24px;
+    padding: 16px 46px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    border-radius:2px;
+    display: inline-block;
+    text-decoration: none;
+}
+.apply_button:hover {
+    background: $lightBlue;
+    color: black;
+}
+
+main{
+    #facebook_float{
+        position: absolute;
+        right: 44px;
+        top: 69px;
+        >iframe{
+            float:right;
+            clear:right;
+            margin-top:8px;
+            margin-right:20px;
+        }
+        #fb_frame{
+            margin-right:0px;
+            margin-top:0px;
+        }
+    }
+    .super {
+        font-weight:bold;
+        line-height:212%;
+        color:#bbb;
+        margin-bottom:5px
+    }
+
+    .logo {
+        margin-bottom:6px;
+        margin-right: 0;
+        margin-top: 40px;
+    }
+
+    &.course {
+        h4 {
+            font-size: 20px;
+            font-weight: bold;
+            color:#444;
+        }
+    }
+    h3 {
+        font-size: 36px;
+        line-height: 144%;
+        margin-top: 4px;
+        margin-bottom: 0;
+    }
+    .content {
+        position:relative;
+        section {
+            padding: 20px 0;
+            &:last-child {
+                padding-bottom: 0;
+            }
+            .title {
+                font-size: 36px;
+                font-weight: bold;
+                line-height: 152%;
+            }
+        }
+        section >ul {
+            font-size: 16px;
+            line-height: 165%;
+            margin: 0;
+            padding-left: 15px;
+            li {
+                padding-bottom:5px;
+                &.last {
+                    border-bottom: 0px;
+                }
+            }
+        }
+    }
+    section#team, section#jobs {
+        ul {
+            .name {
+                font-size:18px;
+                font-weight:bold;
+            }
+            .about {
+                line-height: 150%;
+                margin-top: 8px;
+                width:64%;
+                margin-bottom: 10px;
+            }
+            .position {
+                font-size: 14px;
+            }
+            .contact_info {
+                margin-top: 9px;
+            }
+            .contact {
+                font-weight: bold;
+            }
+            .profile_photo {
+                float: right;
+                width: 140px;
+            }
+            .profile_twitter {
+                clear: right;
+                float: right;
+                margin-right: 18px;
+                margin-top: 1px;
+                opacity: 0.6;
+                width: 20px;
+                &:hover{
+                    opacity: 0.8;
+                };
+            }
+        }
+    }
+    section#team {
+        ul {
+            list-style:none;
+            padding:0px;
+            margin:0px;
+            li {
+                border-bottom: 1px solid #ddd;
+                padding-bottom:18px;
+                margin-bottom:18px;
+                &.last {
+                    border-bottom: 0px solid #ddd;
+                    padding-bottom:0px;
+                    margin-bottom:0px;
+                }
+                .profile_photo {
+                    margin-right: 17px;
+                }
+            }
+        }
+        .role {
+            font-style:italic;
+            color:#777;
+        }
+    }
+    section#jobs {
+        ul .about {
+            width: 75%;
+        }
+        .listings {
+            list-style:none;
+            padding:0px;
+            margin:0px;
+            .listing {
+                border-bottom: 1px solid #ddd;
+                padding-bottom:18px;
+                margin-bottom:18px;
+                &.last {
+                    border-bottom: 0px solid #ddd;
+                    padding-bottom:0px;
+                    margin-bottom:0px;
+                }
+                .profile_photo {
+                    margin-right: 0;
+                }
+            }
+        }
+        .about {
+            color:#555;
+        }
+        .role {
+            li {
+                font-style:italic;
+            }
+        }
+
+        .more_reading {
+        }
+
+        .position {
+            margin-bottom: 20px;
+        }
+
+        .positions {
+            ul {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    section#disclaimer {
+        .title{
+            padding-bottom:0px;
+            font-size:15px;
+            text-align:center;
+        }
+    }
+    section#partners {
+        text-align:center;
+        text-transform:uppercase;
+        font-size:11px;
+        color:#888;
+        #ycc_logo img{
+            width:120px;
+        }
+    }
+}
+
+#jobs{
+    h3 {
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+    ul {
+        padding: 0;
+        ul {
+            padding-left: 16px;
+        }
+    }
+    .jobs-nav {
+        list-style-type: none;
+        text-align: center;
+        margin-bottom: 5px;
+        margin: 0 auto;
+        width: 60%;
+        li {
+            display: inline;
+            margin: 0 4px;
+        }
+    }
+}

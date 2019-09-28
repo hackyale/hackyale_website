@@ -1,6 +1,5 @@
-source 'http://rubygems.org'
-gem 'sinatra'
-gem 'sass'
-gem 'shotgun'
-gem 'thin'
-gem 'newrelic_rpm'
+source 'https://rubygems.org'
+ruby RUBY_VERSION
+
+gem 'github-pages', group: :jekyll_plugins
+gem 'octopress-autoprefixer'

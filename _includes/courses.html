@@ -1,0 +1,16 @@
+{% for course in site.data.courses %}
+<li>
+    <h4 class="name">{{ course.name }}</h4>
+    <div class="description">{{ course.description }}</div>
+    <p>Prerequisites: {{ course.prerequisites }}</p>
+    <p>
+    <strong>Dates:</strong> {{ course.dates }}<br>
+    <strong>Time:</strong> {{ course.time }}<br>
+    <strong>Place:</strong> {{ course.place }}
+    </p>
+    <a class="apply_button" href="{{ course.signup }}" target="_blank">Apply</a>
+    {% if course.closed %}
+    <div class="difficulty">Applications are now closed.</div>
+    {% endif %}
+</li>
+{% endfor %}

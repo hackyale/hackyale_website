@@ -1,0 +1,34 @@
+$darkBlue: #3879B6;
+$medBlue: #4386C5;
+$lightBlue: #E1E8FB;
+$pink: #ec008c;
+$fonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// MIXINS
+@mixin roundedCorners($rad) {
+    -webkit-border-radius: $rad $rad;
+    -moz-border-radius: #{$rad} / #{$rad};
+    -o-border-radius: #{$rad} / #{$rad};
+    -ms-border-radius: #{$rad} / #{$rad};
+    -khtml-border-radius: #{$rad} / #{$rad};
+    border-radius: #{$rad};
+}
+
+@mixin dropShadow($a, $b, $c, $d){ //eg: 2px 2px 4px #000
+    -moz-box-shadow: $a $b $c $d;
+    -webkit-box-shadow: $a $b $c $d;
+    box-shadow: $a $b $c $d;
+}
+
+
+@mixin innerShadow($a, $b, $c, $d){	//eg:  2px 2px 4px rgba(0,0,0,.12)
+    -moz-box-shadow: inset $a $b $c $d;
+    -webkit-box-shadow: inset $a $b $c $d;
+    box-shadow: inset $a $b $c $d;
+}
+
+@mixin transition($a){
+    -moz-transition: $a linear;
+    -webkit-transition: $a linear;
+}
+

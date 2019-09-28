@@ -1,0 +1,22 @@
+title: HackYale
+email: team@hackyale.com
+description: HackYale is an open lecture and workshop series for the Yale community.
+baseurl: "" # Don't change this, this refers to the site's relative path, like /blog.
+url: "https://hackyale.com"
+twitter_username: hackyale
+github_username: HackYale
+#facebook_username: robotics1418
+
+# Build settings
+sass:
+    style: compressed
+exclude:
+    - README.md
+    - LICENSE.md
+    - CNAME
+    - Gemfile
+    - Gemfile.lock
+include:
+    - _pages
+plugins:
+    - octopress-autoprefixer
