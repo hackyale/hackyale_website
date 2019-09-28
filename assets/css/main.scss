@@ -1,7 +1,10 @@
 ---
 ---
-@import "fixes";
 @import "common-vars";
+
+* {
+    box-sizing: border-box;
+}
 
 html {
     height: 100%;
@@ -10,7 +13,7 @@ html {
     body {
         color: #333;
         direction: ltr;
-        font-size: 13px;
+        font-size: 16px;
         font-family: $fonts;
         font-weight: normal;
         line-height: 142%;
@@ -51,7 +54,6 @@ header {
     font-size: 12px;
     left: 0;
     top: 0;
-    opacity: 0.95;
     padding: 10px 0 6px;
     position: fixed;
     width: 100%;
@@ -124,19 +126,9 @@ header {
         padding: 0px;
         >li {
             list-style: none;
-            border: 1px solid #C3C3C3;
-            border-top: 1px solid #aaa;
-            background: #FAFAFA;
-            background-color: rgba(99%, 99%, 99%, 0.95);
-            margin-top: 39px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             margin-bottom: 26px;
-            padding: 30px 41px 41px;
-            &.first {
-                margin-top: 0px;
-            }
-            &.last {
-                margin-bottom: 0px;
-            }
+            padding: 30px;
             .left {
                 display:inline-block;
                 width: 514px;
@@ -153,13 +145,6 @@ header {
                     font-weight: bold;
                 }
                 .description {
-                    line-height: 152%;
-                    font-size: 16px;
-                    width: 90%;
-                }
-                .wide_description {
-                    line-height: 152%;
-                    font-size: 14px;
                 }
             }
             .right {
@@ -178,22 +163,18 @@ header {
 }
 .apply_button {
     background: $darkBlue;
-    border: 1px solid $darkBlue;
     color: white !important;
     font-size: 24px;
     padding: 16px 46px;
     margin-top: 3px;
     margin-bottom: 5px;
     border-radius:2px;
-    margin-left: -4px;
-    display: block;
+    display: inline-block;
+    text-decoration: none;
 }
 .apply_button:hover {
-    background:#fff;
-    background:#E1E8EA;
-    color:#000 !important;
-    border:1px solid #ccc;
-    text-decoration: none;
+    background: $lightBlue;
+    color: black;
 }
 
 main{
@@ -226,33 +207,23 @@ main{
     }
 
     &.course {
-        h1 {
-            font-size: 48px;
+        h4 {
+            font-size: 20px;
             font-weight: bold;
-            line-height:150%;
-        }
-        .subheading {
-            font-size:20px;
-            font-weight: normal;
             color:#444;
         }
-        .content .body.small {
-            width: 56%;
-        }
     }
-    .subheading {
+    h3 {
         font-size: 36px;
         line-height: 144%;
         margin-top: 4px;
     }
     .content {
         border-top:1px solid #ccc;
-        margin-top:15px;
         position:relative;
-        .section {
-            padding-bottom:20px;
-            padding-top:20px;
-            &.last {
+        section {
+            padding: 20px 0;
+            &:last-child {
                 border-bottom:0px solid #dedede;
                 padding-bottom:0px;
             }
@@ -260,22 +231,12 @@ main{
                 font-size: 36px;
                 font-weight: bold;
                 line-height: 152%;
-                padding-bottom: 16px;
             }
         }
-        .body.small {
-            width: 79%;
-            p:nth-child(1){
-                margin-top:0px;
-            }
-        }
-        ul.section {
+        section >ul {
             font-size: 16px;
             line-height: 165%;
             margin: 0;
-            padding-bottom: 16px;
-            padding-left: 17px;
-            padding-top: 20px;
             li {
                 padding-bottom:5px;
                 &.last {
@@ -284,22 +245,7 @@ main{
             }
         }
     }
-    #updates.section ul {
-        margin:0px;
-        padding:0px;
-        padding-left:17px;
-        li{
-            margin-top:20px;
-        }
-        p {
-            margin-top:5px;
-            padding-left:5px;
-        }
-    }
-    #about.section ul {
-        margin-left:18px;
-    }
-    #team.section, #jobs.section{
+    section#team, section#jobs {
         ul {
             .name {
                 font-size:18px;
@@ -339,7 +285,7 @@ main{
             }
         }
     }
-    #team.section {
+    section#team {
         ul {
             list-style:none;
             padding:0px;
@@ -364,7 +310,7 @@ main{
             color:#777;
         }
     }
-    #jobs.section {
+    section#jobs {
         ul .about {
             width: 75%;
         }
@@ -410,19 +356,16 @@ main{
                 margin-bottom: 0;
             }
         }
-
-
-
     }
 
-    #disclaimer.section{
+    section#disclaimer {
         .title{
             padding-bottom:0px;
             font-size:15px;
             text-align:center;
         }
     }
-    #partners.section{
+    section#partners {
         text-align:center;
         text-transform:uppercase;
         font-size:11px;
@@ -431,78 +374,6 @@ main{
             width:120px;
         }
     }
-
-}
-
-#homepage_floatbox{
-    .title {
-        border-bottom: 1px solid #DEDEDE;
-        font-size: 25px;
-        line-height: 142%;
-        margin-bottom: 17px;
-        padding-bottom:8px;
-        width: 100%;
-        color:#333;
-    }
-    input[type="email"], input[type="text"] {
-        padding:12px;
-        border: 1px solid #C3C3C3;
-        border-top: 1px solid #aaa;
-        background: #FAFAFA;
-        width:87.2%;
-        font-size: 13px;
-        display: inline-block;
-        height: 18px;
-        line-height: 18px;
-        color: #444;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-    }
-    input[type="text"]:placeholder {
-        color:#888;
-    }
-    .join_button {
-        background: $darkBlue;
-        border: 1px solid $darkBlue;
-        color: white;
-        font-size: 24px;
-        padding: 16px 46px;
-        margin-top: 18px;
-        border-radius:2px;
-        width: 55%;
-        text-align:center;
-        line-height:18px;
-    }
-    input.join_button{
-        width:210px;
-    }
-    .join_button:hover {
-        background:#fff;
-        background:#E1E8EA;
-        color:#000;
-        border:1px solid #ccc;
-        cursor:pointer;
-    }
-
-    .error {
-        text-align: center;
-        background: #fbe3e4;
-        color: #8a1f11;
-        border: 1px solid #8a1f11;
-        padding: 1px 6px 1px 5px;
-        margin-top: 5px;
-        width: 181px;
-        font-size: 11px;
-    }
-    .error p {margin:0px;}
-
-    .success {
-        color: $darkBlue;
-        font-size:25px;
-        line-height: 142%;
-        padding-bottom: 8px;
-    }
 }
 
 #jobs{
@@ -510,12 +381,6 @@ main{
         font-size: 36px !important;
     }
     ul.listings{
-        width:778px;
-        h2 {
-            font-size: 30px !important;
-            height: 30px;
-            padding-top: 5px;
-        }
         h3 {
             margin-bottom: 8px;
             font-size: 16px;
@@ -530,31 +395,20 @@ main{
             font-weight: bold;
             margin-top: 8px;
         }
-        .jobs-nav-wrapper {
+        .jobs-nav {
             margin-top: 18px;
             margin-bottom: -21px;
             padding: 10px 0;
             text-align: center;
-            border: 1px solid #C3C3C3;
-            border-top: 1px solid #AAA;
             border-bottom: 1px solid #DDD;
             background-color: rgba(252, 252, 252, 0.95);
             width: 778px;
-            .jobs-nav {
-                .jobs-nav-section {
-                    margin: 0 auto;
-                }
-                width: 722px;
-                margin: 0 auto;
-                text-align: center;
-                li {
-                    margin-left: 20px;
-                    list-style-type: none;
-                    float: left;
-                }
-                .first {
-                    margin-left: 0;
-                }
+            margin: 0 auto;
+            text-align: center;
+            li {
+                margin-left: 20px;
+                list-style-type: none;
+                float: left;
             }
         }
     }
@@ -571,13 +425,3 @@ main{
         max-width:140px;
     }
 }
-
-#extras{
-    h3{
-        margin-top:30px;
-    }
-}
-
-.red_text{color:#bd1e1e;}
-.blue_text{color:#2a4a8d;}
-.pink_text{color:#ff007f;}
